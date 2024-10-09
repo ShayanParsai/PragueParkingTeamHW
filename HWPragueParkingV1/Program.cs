@@ -22,19 +22,27 @@
                 {
                     case "1":
                         Console.WriteLine("You selected: Park a vehicle");
-                        // Koden här
+
+                        ParkVehicle();
+
                         break;
                     case "2":
                         Console.WriteLine("You selected: Move a vehicle");
-                        // Koden här
+
+                        MoveVehicle();
+
                         break;
                     case "3":
                         Console.WriteLine("You selected: Remove a vehicle");
-                        // Koden här
+
+                        RemoveVehicle();
+
                         break;
                     case "4":
                         Console.WriteLine("You selected: Search for a vehicle");
-                        // Koden här
+
+                        SearchVehicle();
+
                         break;
                     case "5":
                         Console.WriteLine("Exiting the program...");
@@ -48,5 +56,27 @@
                 Console.WriteLine();
             }
         }
+
+        private static void ParkVehicle()
+        {
+
+        }
+
+        private static void MoveVehicle()
+        {
+
+        }
+
+        private static void RemoveVehicle()
+        {
+
+        }
+
+        private static void SearchVehicle()
+        {
+
+        }
+
+
     }
 }
