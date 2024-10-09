@@ -1,2 +1,1 @@
-# PragueParkingTeamHW
-School assignment
+Användarmanual för programmet :
