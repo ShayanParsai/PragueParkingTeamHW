@@ -48,7 +48,7 @@ namespace HWPragueParkingV1
                     case "2":
                         Console.WriteLine("You selected: Move a vehicle");
 
-                        ManipulateParking.MoveVehicle();
+                        ManipulateParking.OptimizeParking();
 
                         break;
                     case "3":
