@@ -13,11 +13,7 @@ namespace HWPragueParkingV1
 
         public static void CreateParking()
         {
-            int rows = 101;
-
-            string[] ArrayParking = new string[rows];
-
-            for (int row = 0; row < rows; row++)
+            for (int row = 0; row < ArrayParking.Length; row++)
             {
                 ArrayParking[row] = "0";
             }
