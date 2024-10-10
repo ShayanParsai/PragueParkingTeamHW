@@ -14,9 +14,9 @@ namespace HWPragueParkingV1
         {
             Console.Write("Enter your registration number: ");
             string Reg = Console.ReadLine().ToUpper();
-            while (Reg.Length < 10)
+            while (Reg.Length > 10 || Reg.Length < 4)
             {
-                Console.WriteLine("Reg is too long please retry ");
+                Console.WriteLine("Reg is invalid please retry again");
                 Console.Write("Enter your registration number: ");
                 Reg = Console.ReadLine().ToUpper();
             }
@@ -41,9 +41,9 @@ namespace HWPragueParkingV1
 
             Console.Write("Enter your registration number: ");
             string Reg = Console.ReadLine().ToUpper();
-            while (Reg.Length > 10)
+            while (Reg.Length > 10 || Reg.Length < 4)
             {
-                Console.WriteLine("Reg is too long please retry ");
+                Console.WriteLine("Reg is invalid please retry again");
                 Console.Write("Enter your registration number: ");
                 Reg = Console.ReadLine().ToUpper();
             }
@@ -88,22 +88,25 @@ namespace HWPragueParkingV1
             // Park at "X" Spot
             // Save reg at "X"
             //
-
         }
+        ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         public static void OptimizeParkingMC()
         {
             // string originalText = "Hello World!";
             // string newText = originalText.Replace("World", "C# Developer"); // replace the desierd string
         }
+        ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         public static void RemoveCar()
         {
             // Input Reg nummer
             // Remove vehicle from spot X
         }
+        ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         public static void RemoveMC()
         {
 
         }
+        ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         public static void SearchVehicle()
         {
             // Input Reg nummer

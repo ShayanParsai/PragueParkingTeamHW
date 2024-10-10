@@ -47,17 +47,31 @@ namespace HWPragueParkingV1
                         //ManipulateParking.AddCar();
                         ManipulateParking.AddMC();
 
+                        for (int i = 0; i < InfoArray.ArrayParking.GetLength(0); i++)
 
+
+                        {
+                            Console.Write("|{0} ", InfoArray.ArrayParking[i]);
+                        }
+                        Console.WriteLine();
 
                         break;
                     case "2":
                         Console.WriteLine("Move a vehicle");
-
+                        Console.WriteLine("car");
+                        ManipulateParking.AddCar();
                         //Console.WriteLine("MC");
                         //Console.WriteLine("Car");
                         //Console.WriteLine("return");
                         //Console.ReadKey();
 
+                        for (int i = 0; i < InfoArray.ArrayParking.GetLength(0); i++)
+
+
+                        {
+                            Console.Write("|{0} ", InfoArray.ArrayParking[i]);
+                        }
+                        Console.WriteLine();
                         break;
                     case "3":
                         Console.WriteLine("You selected: Remove a vehicle");
@@ -83,16 +97,16 @@ namespace HWPragueParkingV1
                         break;
                 }
 
-                
+
                 //Check
                 //for (int i = 0; i < InfoArray.ArrayParking.GetLength(0); i++)
-                //
-                //    
-                //    {
-                //        Console.Write("|{0} ", InfoArray.ArrayParking[i]);
-                //    }
-                //    Console.WriteLine();
-                //
+
+
+                //{
+                //    Console.Write("|{0} ", InfoArray.ArrayParking[i]);
+                //}
+                //Console.WriteLine();
+
 
                 Console.WriteLine();
             }
