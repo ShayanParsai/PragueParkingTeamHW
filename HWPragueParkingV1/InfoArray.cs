@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace HWPragueParkingV1
 {
-    class Array
+    class InfoArray
     {
-        private string[,] ArrayParking = new string[2, 101];     // Så att array sparas som private.
+        public static string[,] ArrayParking = new string[2, 101];     // Så att array sparas som private.
+                                                                       // samt Array som sparar info
 
-        public static void StartSpaces()
+        public void StartSpaces()
         {
             int rows = 2;
             int columns = 101;
@@ -28,7 +29,7 @@ namespace HWPragueParkingV1
 
             //check
 
-            //for (int i = 0; i < ArrayParking.GetLength(0); i++)      
+            //for (int i = 0; i < ArrayParking.GetLength(0); i++)
             //{
             //    for (int j = 0; j < ArrayParking.GetLength(1); j++)
             //    {
@@ -38,5 +39,5 @@ namespace HWPragueParkingV1
             //}
 
         }
-    }            
+    }
 }
