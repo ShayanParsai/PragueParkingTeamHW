@@ -2,30 +2,33 @@ Shayan
 - https://miro.com/ planering, förbreda inför uppgiften, räkna ut hur vi ska lösa uppgiften
 - Simpel switchmeny med 5 olika val.
 - Vi satt i Chalmers grupprum, brainstorming, skapa classer, metoder och byggt på grunden i koded, mappat ut hur eventuella metoder ska se ut.
--
+- Vi har skapat en static array som används genom alla klasser som uppdateras med varje add mc/car.
+- Problem uppstod när vi skulle kalla på vår static array. Fixade med en simple bugfix
 -
 -
 -
 Basel
 - https://miro.com/ planering, förbreda inför uppgiften, räkna ut hur vi ska lösa uppgiften
 - Vi satt i Chalmers grupprum, brainstorming, skapa classer, metoder och byggt på grunden i koded, mappat ut hur eventuella metoder ska se ut.
--
--
+- Vi har skapat en static array som används genom alla klasser som uppdateras med varje add mc/car.
+- Vi skapade add Car och add MC. Problem uppstod när vi skulle kalla på vår static array. Fixade med en simple bugfix. 
+- En fungerade "karta" över parkeringen.
 -
 -
 -
 Oliver
 - https://miro.com/ planering, förbreda inför uppgiften, räkna ut hur vi ska lösa uppgiften
 - Vi satt i Chalmers grupprum, brainstorming, skapa classer, metoder och byggt på grunden i koded, mappat ut hur eventuella metoder ska se ut.
--
--
+- Vi har skapat en static array som används genom alla klasser som uppdateras med varje add mc/car.
+- Vi skapade add Car och add MC. Problem uppstod när vi skulle kalla på vår static array. Fixade med en simple bugfix. 
+- En fungerade "karta" över parkeringen.
 -
 -
 -
 Martin
 - https://miro.com/ planering, förbreda inför uppgiften, räkna ut hur vi ska lösa uppgiften
 - Vi satt i Chalmers grupprum, brainstorming, skapa classer, metoder och byggt på grunden i koded, mappat ut hur eventuella metoder ska se ut.
--
+- Vi har skapat en static array som används genom alla klasser som uppdateras med varje add mc/car.
 -
 -
 -
