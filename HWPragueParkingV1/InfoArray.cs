@@ -6,37 +6,35 @@ using System.Threading.Tasks;
 
 namespace HWPragueParkingV1
 {
-    class InfoArray
-    {
-        public static string[,] ArrayParking = new string[2, 101];     // Så att array sparas som private.
-                                                                       // samt Array som sparar info
+    internal class InfoArray
+    { 
+        public static string[] ArrayParking = new string[101];     // Så att array sparas som private.
+                                                                   // samt Array som sparar info
 
-        public void StartSpaces()
+        public static void CreateParking()
         {
-            int rows = 2;
-            int columns = 101;
+            int rows = 101;
 
-            string[,] ArrayParking = new string[rows, columns];
-
+            string[] ArrayParking = new string[rows];
 
             for (int row = 0; row < rows; row++)
             {
-                for (int column = 0; column < columns; column++)
-                {
-                    ArrayParking[row, column] = "0";
-                }
+                ArrayParking[row] = "0";
             }
+
+
+
 
             //check
 
-            //for (int i = 0; i < ArrayParking.GetLength(0); i++)
+            //for (int i = 0; i < ArrayParking.Length; i++)
+
             //{
-            //    for (int j = 0; j < ArrayParking.GetLength(1); j++)
-            //    {
-            //        Console.Write("{0} ", ArrayParking[i, j]);
-            //    }
-            //    Console.WriteLine();
+
+            //    Console.Write("{0} ", ArrayParking[i]);
             //}
+            //Console.WriteLine();
+
 
         }
     }

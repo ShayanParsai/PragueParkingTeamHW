@@ -4,22 +4,20 @@ namespace HWPragueParkingV1
 {
     internal class StartMenu
     {
+
+
         static void Main(string[] args)
         {
             // Här skapar vi en instans av klasserna
             
-            InfoArray InfoArray = new InfoArray();
-            ManipulateParking ManipulateParking = new ManipulateParking();
+   
+            //ManipulateParking ManipulateParking = new ManipulateParking();
             // För att öppna upp array till vår main
 
-            InfoArray.StartSpaces();
+            InfoArray.CreateParking();
 
 
-
-
-
-
-
+ 
 
 
 
@@ -40,21 +38,34 @@ namespace HWPragueParkingV1
                 switch (choice)
                 {
                     case "1":
-                        Console.WriteLine("You selected: Park a vehicle");
+                        Console.WriteLine("Park a vehicle");
 
-                        ManipulateParking.AddVehicle();
+                        //Console.WriteLine("MC");
+                        //Console.WriteLine("Car");
+                        //Console.WriteLine("return");
+                        //Console.ReadKey();
+                        //ManipulateParking.AddCar();
+                        ManipulateParking.AddMC();
+
+
 
                         break;
                     case "2":
-                        Console.WriteLine("You selected: Move a vehicle");
+                        Console.WriteLine("Move a vehicle");
 
-                        ManipulateParking.OptimizeParking();
+                        //Console.WriteLine("MC");
+                        //Console.WriteLine("Car");
+                        //Console.WriteLine("return");
+                        //Console.ReadKey();
 
                         break;
                     case "3":
                         Console.WriteLine("You selected: Remove a vehicle");
 
-                        ManipulateParking.RemoveVehicle();
+                        Console.WriteLine("MC");
+                        Console.WriteLine("Car");
+                        Console.WriteLine("return");
+                        Console.ReadKey();
 
                         break;
                     case "4":
@@ -75,13 +86,13 @@ namespace HWPragueParkingV1
                 
                 //Check
                 //for (int i = 0; i < InfoArray.ArrayParking.GetLength(0); i++)
-                //{
-                //    for (int j = 0; j < InfoArray.ArrayParking.GetLength(1); j++)
+                //
+                //    
                 //    {
-                //        Console.Write("|{0} ", InfoArray.ArrayParking[i, j]);
+                //        Console.Write("|{0} ", InfoArray.ArrayParking[i]);
                 //    }
                 //    Console.WriteLine();
-                //}
+                //
 
                 Console.WriteLine();
             }
