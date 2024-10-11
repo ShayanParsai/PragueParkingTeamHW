@@ -37,7 +37,7 @@ namespace HWPragueParkingV1
         ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         public static void AddMC()
         {
-            string substring = "*";
+            string substring = "#";
 
             Console.Write("Enter your registration number: ");
             string Reg = Console.ReadLine().ToUpper();
@@ -48,7 +48,7 @@ namespace HWPragueParkingV1
                 Reg = Console.ReadLine().ToUpper();
             }
 
-            for (int row = 1; row < 101; row++)
+            for (int row = 0; row < 101; row++)
             {
                 
                 if (InfoArray.ArrayParking[row].Contains(substring))
@@ -64,7 +64,7 @@ namespace HWPragueParkingV1
 
                     if (index != -1)                                                                           // save in array if space found
                     {
-                        InfoArray.ArrayParking[index] = Reg + ("*#");                                          // adds our search icon to find for later MC parking
+                        InfoArray.ArrayParking[index] = Reg + (" * #");                                          // adds our search icon to find for later MC parking
                         Console.WriteLine($"Your MC has been parked at spot {index + 1}");
                         break;
                     }

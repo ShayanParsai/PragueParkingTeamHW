@@ -8,12 +8,13 @@ namespace HWPragueParkingV1
 {
     internal class InfoArray
     { 
-        public static string[] ArrayParking = new string[101];     // Så att array sparas som private.
+        public static string[] ArrayParking = new string[101];     
                                                                    // samt Array som sparar info
 
         public static void CreateParking()
         {
-            for (int row = 0; row < ArrayParking.Length; row++)
+            ArrayParking[0] = "$";                                 // parking space 0 used for moving vehicles if parking is full
+            for (int row = 1; row < ArrayParking.Length; row++)
             {
                 ArrayParking[row] = "0";
             }

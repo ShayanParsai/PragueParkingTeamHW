@@ -9,15 +9,15 @@ namespace HWPragueParkingV1
         static void Main(string[] args)
         {
             // Här skapar vi en instans av klasserna
-            
-   
+
+
             //ManipulateParking ManipulateParking = new ManipulateParking();
             // För att öppna upp array till vår main
 
             InfoArray.CreateParking();
 
 
- 
+
 
 
 
@@ -48,8 +48,6 @@ namespace HWPragueParkingV1
                         ManipulateParking.AddMC();
 
                         for (int i = 0; i < InfoArray.ArrayParking.GetLength(0); i++)
-
-
                         {
                             Console.Write("|{0} ", InfoArray.ArrayParking[i]);
                         }
@@ -112,7 +110,7 @@ namespace HWPragueParkingV1
             }
         }
 
-        
+
 
 
     }
