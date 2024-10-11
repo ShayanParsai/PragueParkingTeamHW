@@ -25,7 +25,7 @@ Oliver
 - Vi har skapat en static array som används genom alla klasser som uppdateras med varje add mc/car.
 - Vi skapade add Car och add MC. Problem uppstod när vi skulle kalla på vår static array. Fixade med en simple bugfix. 
 - En fungerade "karta" över parkeringen.
--
+- BugFix Bugfix: 3 Mc kunde parkera på samma plats, Mc kunde parkera på plats 0 och sen inte hittas.
 -
 -
 Martin
