@@ -132,7 +132,37 @@ namespace HWPragueParkingV1
             // search for spot of vehicle "X"
             // output "Vehicle is at spot "X"
         }
+        public static void ViewParking()
+        {
+            string[] unwantedSymbols = { "", "#" };                         // Create and array of the unwanted char but in string format
 
+            for (int i = 1; i < InfoArray.ArrayParking.Length; i++)
+            {
+                string currentString = InfoArray.ArrayParking[i];
+
+                foreach (string symbol in unwantedSymbols)                            // Removes all symbols from currentstring first i each i 
+                {
+                    currentString = currentString.Replace(symbol, "").Trim();         // Trim removes all dead space before/after a string
+                }
+
+                currentString = currentString.Replace("  ", " & ").Trim();              // Removes dead space between 2 MC (Was ugly without)
+
+                if (InfoArray.ArrayParking[i].Contains(""))                          // If it contained the chosen symbol for mc print red 
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                }
+                else if (InfoArray.ArrayParking[i] != "0")                            // if its a car show blue
+                {
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.White;                     // empty space = white
+                }
+                Console.Write($"|{currentString}");                                   // put reset here so i dont have to write everything x2
+                Console.ResetColor();
+            }
+        }
 
     }
 

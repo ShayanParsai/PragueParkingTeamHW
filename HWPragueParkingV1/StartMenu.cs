@@ -78,15 +78,36 @@ namespace HWPragueParkingV1
                         Console.WriteLine("Car");
                         Console.WriteLine("return");
                         Console.ReadKey();
-
                         break;
+
                     case "4":
                         Console.WriteLine("You selected: Search for a vehicle");
 
                         ManipulateParking.SearchVehicle();
+                        break;
+
+                    case "5":
+                        Console.WriteLine("You selected: View Parking");
+                        Console.Write("Cars will appear in ");
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.WriteLine("Blue");
+                        Console.ResetColor();
+                        Console.Write("Motorcykles will appear in ");
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Red");
+                        Console.ResetColor();
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.WriteLine(@"And empty spaces are shown by ""0""");
+                        Console.ResetColor();
+                        Console.WriteLine();
+                        ManipulateParking.ViewParking();
+                        break;
+
+                    case "6":
+                        ManipulateParking.ViewParking();
 
                         break;
-                    case "5":
+                    case "7":
                         Console.WriteLine("Exiting the program...");
                         running = false;
                         break;
