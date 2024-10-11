@@ -73,7 +73,7 @@ namespace HWPragueParkingV1
                         break;
                     case "3":
                         Console.WriteLine("You selected: Remove a vehicle");
-
+                        ManipulateParking.RemoveCar();
                         Console.WriteLine("MC");
                         Console.WriteLine("Car");
                         Console.WriteLine("return");

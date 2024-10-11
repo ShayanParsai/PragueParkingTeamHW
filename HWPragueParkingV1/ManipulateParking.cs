@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
@@ -26,7 +27,7 @@ namespace HWPragueParkingV1
             if (index != -1)                                           // save in array if space found
             {
                 InfoArray.ArrayParking[index] = Reg;
-                Console.WriteLine($"Your car has been parked at spot {index + 1}");
+                Console.WriteLine($"Your car has been parked at spot {index}");
             }
             else
             {
@@ -65,7 +66,7 @@ namespace HWPragueParkingV1
                     if (index != -1)                                                                           // save in array if space found
                     {
                         InfoArray.ArrayParking[index] = Reg + (" * #");                                          // adds our search icon to find for later MC parking
-                        Console.WriteLine($"Your MC has been parked at spot {index + 1}");
+                        Console.WriteLine($"Your MC has been parked at spot {index}");
                         break;
                     }
                     else
@@ -99,6 +100,24 @@ namespace HWPragueParkingV1
         public static void RemoveCar()
         {
             // Input Reg nummer
+            Console.Write("Enter your registration number: ");
+            string Reg = Console.ReadLine().ToUpper();
+            while (Reg.Length > 10 || Reg.Length < 4)
+            {
+                Console.WriteLine("Reg is invalid please retry again");
+                Console.Write("Enter your registration number: ");
+                Reg = Console.ReadLine().ToUpper();
+            }
+            for (int row = 0; row < 101; row++)
+            {
+                if (InfoArray.ArrayParking[row].Contains(Reg))
+                {
+                    int index = Array.IndexOf(InfoArray.ArrayParking, Reg);
+                    InfoArray.ArrayParking[row] = InfoArray.ArrayParking[row].Replace(Reg, "0");
+                    Console.WriteLine($"Your car was removed from spot {index}");
+                }
+            }
+
             // Remove vehicle from spot X
         }
         ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
