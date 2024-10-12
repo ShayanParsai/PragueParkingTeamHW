@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bas_e\\Source\\Repos\\PragueParkingTeamHWtester\\HWPragueParkingV1\\HWPragueParkingV1.csproj": {}
+    "C:\\Users\\ollic\\Source\\Repos\\PragueParkingTeamHW\\HWPragueParkingV1\\HWPragueParkingV1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bas_e\\Source\\Repos\\PragueParkingTeamHWtester\\HWPragueParkingV1\\HWPragueParkingV1.csproj": {
+    "C:\\Users\\ollic\\Source\\Repos\\PragueParkingTeamHW\\HWPragueParkingV1\\HWPragueParkingV1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bas_e\\Source\\Repos\\PragueParkingTeamHWtester\\HWPragueParkingV1\\HWPragueParkingV1.csproj",
+        "projectUniqueName": "C:\\Users\\ollic\\Source\\Repos\\PragueParkingTeamHW\\HWPragueParkingV1\\HWPragueParkingV1.csproj",
         "projectName": "HWPragueParkingV1",
-        "projectPath": "C:\\Users\\bas_e\\Source\\Repos\\PragueParkingTeamHWtester\\HWPragueParkingV1\\HWPragueParkingV1.csproj",
-        "packagesPath": "C:\\Users\\bas_e\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bas_e\\Source\\Repos\\PragueParkingTeamHWtester\\HWPragueParkingV1\\obj\\",
+        "projectPath": "C:\\Users\\ollic\\Source\\Repos\\PragueParkingTeamHW\\HWPragueParkingV1\\HWPragueParkingV1.csproj",
+        "packagesPath": "C:\\Users\\ollic\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ollic\\Source\\Repos\\PragueParkingTeamHW\\HWPragueParkingV1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\bas_e\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ollic\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

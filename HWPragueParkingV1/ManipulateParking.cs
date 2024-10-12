@@ -36,6 +36,8 @@ namespace HWPragueParkingV1
                 Console.WriteLine("Theres no available spots");
                 Console.ReadKey(true);  
             }
+            Console.WriteLine("Press any key to return to menu:");
+            Console.ReadKey(true);
         }
 
         ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -84,7 +86,8 @@ namespace HWPragueParkingV1
                 }
 
             }
-
+            Console.WriteLine("Press any key to return to menu:");
+            Console.ReadKey(true);
         }
 
         ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -141,7 +144,7 @@ namespace HWPragueParkingV1
         }
         public static void ViewParking()
         {
-            string[] unwantedSymbols = { "", "#" };                         // Create and array of the unwanted char but in string format
+            string[] unwantedSymbols = { "*", "#" };                         // Create and array of the unwanted char but in string format
 
             for (int i = 1; i < InfoArray.ArrayParking.Length; i++)
             {
@@ -154,7 +157,7 @@ namespace HWPragueParkingV1
 
                 currentString = currentString.Replace("  ", " & ").Trim();              // Removes dead space between 2 MC (Was ugly without)
 
-                if (InfoArray.ArrayParking[i].Contains(""))                          // If it contained the chosen symbol for mc print red 
+                if (InfoArray.ArrayParking[i].Contains("*"))                          // If it contained the chosen symbol for mc print red 
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                 }
@@ -169,6 +172,8 @@ namespace HWPragueParkingV1
                 Console.Write($"|{currentString}");                                   // put reset here so i dont have to write everything x2
                 Console.ResetColor();
             }
+            Console.WriteLine("Press any key to return to menu:");
+            Console.ReadKey(true);
         }
 
     }

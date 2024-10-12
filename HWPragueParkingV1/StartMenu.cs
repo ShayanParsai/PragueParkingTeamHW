@@ -25,7 +25,7 @@ namespace HWPragueParkingV1
             Console.Clear();
             HelloWorld();
 
-            string[] menuChoice = { "Park a Vehicle", "Remove a Vehicle", "Seartch for a vehicle", "View Parking Place",
+            string[] menuChoice = { "Park a Vehicle", "Remove a Vehicle", "Search for a vehicle", "View Parking Place",
                 "Move a Vehicle", "Credits", "Exit" };  // Skapar en array för att i min tidigare version där jag använda massa cw flickrade skärmen detta gör det mer smooth
             int maxLength = menuChoice.Max(item => item.Length) + 4;
             while (true)
@@ -51,10 +51,7 @@ namespace HWPragueParkingV1
 
                         Console.WriteLine(centeredText);
                     }
-
-
                 }
-
 
                 keyInfo = Console.ReadKey(true);
 
@@ -70,9 +67,6 @@ namespace HWPragueParkingV1
                 }
                 else if (keyInfo.Key == ConsoleKey.Enter)
                 {
-
-
-
                     switch (choice)
                     {
                         case 0:
@@ -101,7 +95,7 @@ namespace HWPragueParkingV1
                             break;
                         case 3:
                             Console.Clear();
-                            CenterTextLine("View Parking Place");                   // Metod 
+                            CenterTextLine("View Parking");                   // Metod 
                             Console.ReadKey();
                             Console.Clear();
                             HelloWorld();
@@ -128,27 +122,16 @@ namespace HWPragueParkingV1
                             ShuttingDown();
                             Environment.Exit(0);                // Force programmet att stängas av
                             break;
-
-
-
-
                     }
                 }
-
-
             }
-
-
-
         }
 
         static string GetCenterText(string text)                // checkar vart mitten av consolappen är
         {
             int consolWidth = Console.WindowWidth;
             int leftPadding = (consolWidth - text.Length) / 2;
-
             return new string(' ', leftPadding) + text;         // skriver ut mellanslag innan texten
-
         }
 
         static void CenterTextLine(string text)                 //detta är vår centrerade text med writeline
@@ -172,7 +155,6 @@ namespace HWPragueParkingV1
 
         static void StartingSystem()            // Gör en cool effect för starting system
         {
-
             string message = "Starting System";
             CenterText(message);
 
@@ -181,13 +163,11 @@ namespace HWPragueParkingV1
                 Thread.Sleep(500);
                 Console.Write(".");
             }
-
             Thread.Sleep(1000);
         }
 
         static void ShuttingDown()            // Gör en cool effect för shutdown system
         {
-
             string message = "Shutting down";
             CenterText(message);
 
@@ -196,7 +176,6 @@ namespace HWPragueParkingV1
                 Thread.Sleep(500);
                 Console.Write(".");
             }
-
             Thread.Sleep(1000);
         }
 
@@ -211,7 +190,6 @@ namespace HWPragueParkingV1
 
             while (true)
             {
-
                 Console.SetCursorPosition(0, 4);            // Här börjar positionen av vår Cursor på rad 2 för att 0 - 1 är reserverad för vår rubrik
 
                 for (int i = 0; i < carorMC.Length; i++)
@@ -230,10 +208,8 @@ namespace HWPragueParkingV1
                     }
                     else
                     {
-
                         Console.WriteLine(centeredText);
                     }
-
                 }
 
                 keyInfo = Console.ReadKey(true);
@@ -265,10 +241,7 @@ namespace HWPragueParkingV1
                             CenterText("Retrun");
                             return;
                     }
-
-
                 }
-
             }
         }
 
@@ -283,7 +256,6 @@ namespace HWPragueParkingV1
 
             while (true)
             {
-
                 Console.SetCursorPosition(0, 4);            // Här börjar positionen av vår Cursor på rad 2 för att 0 - 1 är reserverad för vår rubrik
 
                 for (int i = 0; i < carorMC.Length; i++)
@@ -302,10 +274,8 @@ namespace HWPragueParkingV1
                     }
                     else
                     {
-
                         Console.WriteLine(centeredText);
                     }
-
                 }
 
                 keyInfo = Console.ReadKey(true);
@@ -337,10 +307,7 @@ namespace HWPragueParkingV1
                             CenterText("Retrun");
                             return;
                     }
-
-
                 }
-
             }
         }
 
@@ -355,7 +322,6 @@ namespace HWPragueParkingV1
 
             while (true)
             {
-
                 Console.SetCursorPosition(0, 4);            // Här börjar positionen av vår Cursor på rad 2 för att 0 - 1 är reserverad för vår rubrik
 
                 for (int i = 0; i < carorMC.Length; i++)
@@ -374,10 +340,8 @@ namespace HWPragueParkingV1
                     }
                     else
                     {
-
                         Console.WriteLine(centeredText);
                     }
-
                 }
 
                 keyInfo = Console.ReadKey(true);
@@ -409,10 +373,7 @@ namespace HWPragueParkingV1
                             CenterText("Retrun");
                             return;
                     }
-
-
                 }
-
             }
         }
 
@@ -427,7 +388,6 @@ namespace HWPragueParkingV1
 
             while (true)
             {
-
                 Console.SetCursorPosition(0, 4);            // Här börjar positionen av vår Cursor på rad 2 för att 0 - 1 är reserverad för vår rubrik
 
                 for (int i = 0; i < carorMC.Length; i++)
@@ -481,10 +441,7 @@ namespace HWPragueParkingV1
                             CenterText("Retrun");
                             return;
                     }
-
-
                 }
-
             }
         }
     }
