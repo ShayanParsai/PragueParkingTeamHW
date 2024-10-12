@@ -172,6 +172,7 @@ namespace HWPragueParkingV1
                 Console.Write($"|{currentString}");                                   // put reset here so i dont have to write everything x2
                 Console.ResetColor();
             }
+            Console.WriteLine();
             Console.WriteLine("Press any key to return to menu:");
             Console.ReadKey(true);
         }
