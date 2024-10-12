@@ -15,7 +15,9 @@ Basel
 - Vi har skapat en static array som används genom alla klasser som uppdateras med varje add mc/car.
 - Vi skapade add Car och add MC. Problem uppstod när vi skulle kalla på vår static array. Fixade med en simple bugfix. 
 - En fungerade "karta" över parkeringen.
--
+- Har lagt till interaktiv menu. RIKIGT coolt. Har även centrerat så att texten börjar i mitten av skrämen. Har skapat flera metoder för att dom ska funka tillsammans med menun och våra andra classer.
+- Bugfixat runt om men för det mesta i menun. 
+- 
 -
 -
 Oliver
