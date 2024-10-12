@@ -72,3 +72,18 @@ C:\Users\marti\Desktop\KYH\Prague Parking\PragueParking\HWPragueParkingV1\obj\De
 C:\Users\marti\Desktop\KYH\Prague Parking\PragueParking\HWPragueParkingV1\obj\Debug\net8.0\HWPragueParkingV1.pdb
 C:\Users\marti\Desktop\KYH\Prague Parking\PragueParking\HWPragueParkingV1\obj\Debug\net8.0\HWPragueParkingV1.genruntimeconfig.cache
 C:\Users\marti\Desktop\KYH\Prague Parking\PragueParking\HWPragueParkingV1\obj\Debug\net8.0\ref\HWPragueParkingV1.dll
+C:\Users\bas_e\Source\Repos\PragueParkingTeamHWtester\HWPragueParkingV1\bin\Debug\net8.0\HWPragueParkingV1.exe
+C:\Users\bas_e\Source\Repos\PragueParkingTeamHWtester\HWPragueParkingV1\bin\Debug\net8.0\HWPragueParkingV1.deps.json
+C:\Users\bas_e\Source\Repos\PragueParkingTeamHWtester\HWPragueParkingV1\bin\Debug\net8.0\HWPragueParkingV1.runtimeconfig.json
+C:\Users\bas_e\Source\Repos\PragueParkingTeamHWtester\HWPragueParkingV1\bin\Debug\net8.0\HWPragueParkingV1.dll
+C:\Users\bas_e\Source\Repos\PragueParkingTeamHWtester\HWPragueParkingV1\bin\Debug\net8.0\HWPragueParkingV1.pdb
+C:\Users\bas_e\Source\Repos\PragueParkingTeamHWtester\HWPragueParkingV1\obj\Debug\net8.0\HWPragueParkingV1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bas_e\Source\Repos\PragueParkingTeamHWtester\HWPragueParkingV1\obj\Debug\net8.0\HWPragueParkingV1.AssemblyInfoInputs.cache
+C:\Users\bas_e\Source\Repos\PragueParkingTeamHWtester\HWPragueParkingV1\obj\Debug\net8.0\HWPragueParkingV1.AssemblyInfo.cs
+C:\Users\bas_e\Source\Repos\PragueParkingTeamHWtester\HWPragueParkingV1\obj\Debug\net8.0\HWPragueParkingV1.csproj.CoreCompileInputs.cache
+C:\Users\bas_e\Source\Repos\PragueParkingTeamHWtester\HWPragueParkingV1\obj\Debug\net8.0\HWPragueParkingV1.sourcelink.json
+C:\Users\bas_e\Source\Repos\PragueParkingTeamHWtester\HWPragueParkingV1\obj\Debug\net8.0\HWPragueParkingV1.dll
+C:\Users\bas_e\Source\Repos\PragueParkingTeamHWtester\HWPragueParkingV1\obj\Debug\net8.0\refint\HWPragueParkingV1.dll
+C:\Users\bas_e\Source\Repos\PragueParkingTeamHWtester\HWPragueParkingV1\obj\Debug\net8.0\HWPragueParkingV1.pdb
+C:\Users\bas_e\Source\Repos\PragueParkingTeamHWtester\HWPragueParkingV1\obj\Debug\net8.0\HWPragueParkingV1.genruntimeconfig.cache
+C:\Users\bas_e\Source\Repos\PragueParkingTeamHWtester\HWPragueParkingV1\obj\Debug\net8.0\ref\HWPragueParkingV1.dll

@@ -13,6 +13,7 @@ namespace HWPragueParkingV1
 
         public static void AddCar()
         {
+            Console.Clear();
             Console.Write("Enter your registration number: ");
             string Reg = Console.ReadLine().ToUpper();
             while (Reg.Length > 10 || Reg.Length < 4)
@@ -28,16 +29,19 @@ namespace HWPragueParkingV1
             {
                 InfoArray.ArrayParking[index] = Reg;
                 Console.WriteLine($"Your car has been parked at spot {index}");
+                Console.ReadKey(true);
             }
             else
             {
                 Console.WriteLine("Theres no available spots");
+                Console.ReadKey(true);  
             }
         }
 
         ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         public static void AddMC()
         {
+            Console.Clear();
             string substring = "#";
 
             Console.Write("Enter your registration number: ");
@@ -57,6 +61,7 @@ namespace HWPragueParkingV1
 
                     InfoArray.ArrayParking[row] = InfoArray.ArrayParking[row].Replace("#", Reg);               // replace the desierd string in empty 1/2 MC space (2 Mc parked in same space)
                     Console.WriteLine($"Your MC is parked in space {row} with another motorcycle");
+                    Console.ReadKey(true);
                     break;
                 }
                 else if (InfoArray.ArrayParking[row] == "0")
@@ -67,11 +72,13 @@ namespace HWPragueParkingV1
                     {
                         InfoArray.ArrayParking[index] = Reg + (" * #");                                          // adds our search icon to find for later MC parking
                         Console.WriteLine($"Your MC has been parked at spot {index}");
+                        Console.ReadKey(true);
                         break;
                     }
                     else
                     {
                         Console.WriteLine("Theres no available spots");
+                        Console.ReadKey(true);
                         break;
                     }
                 }
