@@ -26,7 +26,7 @@ namespace HWPragueParkingV1
 
             //for (int i = 0; i < ArrayParking.Length; i++)
 
-            //{
+            
 
             //    Console.Write("{0} ", ArrayParking[i]);
             //}
@@ -36,6 +36,3 @@ namespace HWPragueParkingV1
         }
     }
 }
-
-
-//gitcheck
