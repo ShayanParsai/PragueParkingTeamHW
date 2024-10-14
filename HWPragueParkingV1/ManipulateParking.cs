@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
@@ -29,12 +30,10 @@ namespace HWPragueParkingV1
             {
                 InfoArray.ArrayParking[index] = Reg;
                 Console.WriteLine($"Your car has been parked at spot {index}");
-                
             }
             else
             {
                 Console.WriteLine("Theres no available spots");
-                 
             }
             Console.WriteLine("Press any key to return to menu:");
             Console.ReadKey(true);
@@ -83,7 +82,6 @@ namespace HWPragueParkingV1
                         break;
                     }
                 }
-
             }
             Console.WriteLine("Press any key to return to the menu:");
             Console.ReadKey(true);
@@ -128,7 +126,7 @@ namespace HWPragueParkingV1
                 }
             }
 
-            // Remove vehicle from spot X
+                                                                                                  // Remove vehicle from spot X
         }
         ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         public static void RemoveMC()
@@ -136,12 +134,72 @@ namespace HWPragueParkingV1
 
         }
         ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-        public static void SearchVehicle()
+        public static void CarSearch()
         {
-            // Input Reg nummer
-            // search for spot of vehicle "X"
-            // output "Vehicle is at spot "X"
+            bool isFound = false;
+
+            while (!isFound)
+            {
+
+                Console.Write("Enter in the Car Registration: ");
+                string inputCarReg = Console.ReadLine().ToUpper();
+
+                for (int i = 1; i < InfoArray.ArrayParking.Length; i++)
+                {
+                    if (inputCarReg == "RETURN")
+                    {
+                        isFound = true;                                                               // Set flag to true when registration number is found
+                    }
+                    else if (inputCarReg == InfoArray.ArrayParking[i])
+                    {
+                        isFound = true;
+                        Console.WriteLine($"Your vehicle is parked in spot number: {i}");
+                        Console.WriteLine();
+                        Console.ReadKey(true);
+                    }
+                }
+
+                if (!isFound)
+                {
+                    Console.WriteLine("Registration number not found. Please try again.");
+                    Console.WriteLine(@"Type ""Return"" to go back to menu");
+                }
+            }
         }
+        ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        public static void McSearch()
+        {
+            bool isFound = false;
+
+            while (!isFound)
+            {
+
+                Console.Write("Enter in the motorcycle Registration: ");
+                string inputMcReg = Console.ReadLine().ToUpper();
+
+                for (int i = 1; i < InfoArray.ArrayParking.Length; i++)
+                {
+                    if (inputMcReg == "RETURN")
+                    {
+                        isFound = true;                                                               // Set flag to true when registration number is found
+                    }
+                    else if (InfoArray.ArrayParking[i].Contains(inputMcReg))
+                    {
+                        Console.WriteLine($"Your motorcycle is parked in space number {i}");
+                        isFound = true;                                                              // Set flag to true when registration number is found
+                        Console.ReadKey(true);                                                     
+                    }
+                }
+
+                if (!isFound)
+                {
+                    Console.WriteLine("Registration number not found. Please try again.");
+                    Console.WriteLine(@"Type ""Return"" to go back to menu");
+                }
+            }
+        }
+        
+        ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         public static void ViewParking()
         {
             Console.Write("Cars will appear in: ");
@@ -189,7 +247,5 @@ namespace HWPragueParkingV1
             Console.WriteLine("Press any key to return to menu:");
             Console.ReadKey(true);
         }
-
     }
-
 }
