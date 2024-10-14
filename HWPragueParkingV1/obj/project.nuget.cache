@@ -1,14 +1,15 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "jAla1aCIsII=",
   "success": true,
   "projectFilePath": "C:\\Users\\bas_e\\Source\\Repos\\PragueParkingTeamHW\\HWPragueParkingV1\\HWPragueParkingV1.csproj",
-=======
-  "dgSpecHash": "0eUXpTwE5P4=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\ollic\\Source\\Repos\\PragueParkingTeamHW\\HWPragueParkingV1\\HWPragueParkingV1.csproj",
->>>>>>> 421ed3ff6b6dff70063c56ff4aeafaf375a6bef2
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\bas_e\\Source\\Repos\\PragueParkingTeamHW\\HWPragueParkingV1\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

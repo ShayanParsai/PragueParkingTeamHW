@@ -105,6 +105,66 @@ namespace HWPragueParkingV1
             // string newText = originalText.Replace("World", "C# Developer"); // replace the desierd string
         }
         ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        public static void MoveCar()
+        {
+            string inputCarReg = "";
+            bool backToMainMenu = false;
+
+            Console.WriteLine("Please enter the Vehicle registration number");
+            inputCarReg = Console.ReadLine().ToUpper();
+
+
+            while (!backToMainMenu)
+            {
+
+                if (inputCarReg == "RETURN")
+                {
+                    backToMainMenu = true;
+                }
+
+                else
+                {
+
+                    int index = Array.IndexOf(InfoArray.ArrayParking, inputCarReg);
+                    if (index == -1)
+                    {
+                        Console.Write(@"Reg is invalid please try again, Type ""Return"" if you wish to go to the menu:  ");
+                        inputCarReg = Console.ReadLine().ToUpper();
+                    }
+
+                    else
+                    {
+                        Console.WriteLine($"Your vehicle is parked in spot number: {index}");
+
+                        Console.WriteLine("Enter the parking space you would like to move to: ");
+                        int newSpace = int.Parse(Console.ReadLine());
+
+                        while (InfoArray.ArrayParking[newSpace] != "0")
+                        {
+                            Console.WriteLine("This space is already taken, please choose another: ");
+                            newSpace = int.Parse(Console.ReadLine());
+                            
+                        }
+
+                        // Flytta bilen
+                        Console.WriteLine($"We have moved your vehicle from {index} to parking spot {newSpace}");
+                        InfoArray.ArrayParking[newSpace] = inputCarReg;
+                        InfoArray.ArrayParking[index] = "0";  // Sätt gamla platsen som tom
+                        Console.ReadKey(true);
+
+
+                        // Avsluta loopen efter flytt
+                        break;
+                    }
+                }
+            }
+        }
+        ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        public static void MoveMC()
+        {
+
+        }
+        ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         public static void RemoveCar()
         {
             // Input Reg nummer
@@ -247,5 +307,8 @@ namespace HWPragueParkingV1
             Console.WriteLine("Press any key to return to menu:");
             Console.ReadKey(true);
         }
+        
+
+        
     }
 }

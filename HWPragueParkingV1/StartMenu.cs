@@ -107,16 +107,23 @@ namespace HWPragueParkingV1
                             Console.ReadKey();
                             Console.Clear();
                             HelloWorld();
-                            //CarorMCMove(); OR We do Optimize not sure yet but soon fixed...
+                            CarorMCMove();
                             break;
                         case 5:
+                            Console.Clear();
+                            CenterTextLine("Optimize Parking");                   // Metod 
+                            Console.ReadKey();
+                            Console.Clear();
+                            HelloWorld();
+                            break;
+                        case 6:
                             Console.Clear();
                             CenterTextLine("Credits");                   // Kommer fixa denna senare tid, har lite roliga ideer till detta.
                             Console.ReadKey();
                             Console.Clear();
                             HelloWorld();
                             break;
-                        case 6:
+                        case 7:
                             Console.Clear();
                             CenterTextLine("Optimize parking");
                             Console.ReadKey();
@@ -125,7 +132,7 @@ namespace HWPragueParkingV1
                             // Fill here for the optmizing
                             // If you want the text to be centerd and alinged dont use CW but use the CentertextLine or CenterText.
                             break;
-                        case 7:
+                        case 8:
                             Console.Clear();
                             CenterTextLine("Exit");
                             ShuttingDown();
@@ -138,19 +145,19 @@ namespace HWPragueParkingV1
             }
         }
 
-        static string GetCenterText(string text)                // checkar vart mitten av consolappen är
+        public static string GetCenterText(string text)                // checkar vart mitten av consolappen är
         {
             int consolWidth = Console.WindowWidth;
             int leftPadding = (consolWidth - text.Length) / 2;
             return new string(' ', leftPadding) + text;         // skriver ut mellanslag innan texten
         }
 
-        static void CenterTextLine(string text)                 //detta är vår centrerade text med writeline
+        public static void CenterTextLine(string text)                 //detta är vår centrerade text med writeline
         {
             string centerText = GetCenterText(text);
             Console.WriteLine(centerText);
         }
-        static void CenterText(string text)                     //detta är vår centrerade text med write
+        public static void CenterText(string text)                     //detta är vår centrerade text med write
         {
             string centerText = GetCenterText(text);
             Console.Write(centerText);
@@ -442,11 +449,12 @@ namespace HWPragueParkingV1
                         case 0:
 
                             CenterText("Car");
-                            ManipulateParking.AddCar();
+                            
+                            ManipulateParking.MoveCar();
                             return;
                         case 1:
                             CenterText("MC");
-                            ManipulateParking.AddMC();
+                            
                             return;
                         case 2:
                             CenterText("Retrun");
