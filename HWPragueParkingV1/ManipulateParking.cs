@@ -29,15 +29,16 @@ namespace HWPragueParkingV1
             {
                 InfoArray.ArrayParking[index] = Reg;
                 Console.WriteLine($"Your car has been parked at spot {index}");
-                Console.ReadKey(true);
+                
             }
             else
             {
                 Console.WriteLine("Theres no available spots");
-                Console.ReadKey(true);  
+                 
             }
             Console.WriteLine("Press any key to return to menu:");
             Console.ReadKey(true);
+            Console.Clear();
         }
 
         ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -74,20 +75,19 @@ namespace HWPragueParkingV1
                     {
                         InfoArray.ArrayParking[index] = Reg + (" * #");                                          // adds our search icon to find for later MC parking
                         Console.WriteLine($"Your MC has been parked at spot {index}");
-                        Console.ReadKey(true);
                         break;
                     }
                     else
                     {
                         Console.WriteLine("Theres no available spots");
-                        Console.ReadKey(true);
                         break;
                     }
                 }
 
             }
-            Console.WriteLine("Press any key to return to menu:");
+            Console.WriteLine("Press any key to return to the menu:");
             Console.ReadKey(true);
+            Console.Clear();
         }
 
         ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
