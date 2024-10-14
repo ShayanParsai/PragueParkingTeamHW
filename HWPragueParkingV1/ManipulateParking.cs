@@ -273,6 +273,7 @@ namespace HWPragueParkingV1
             Console.Write("Empty spaces will appear as: ");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(@"""0""");
+            Console.WriteLine();
 
 
             string[] unwantedSymbols = { "*", "#" };                         // Create and array of the unwanted char but in string format

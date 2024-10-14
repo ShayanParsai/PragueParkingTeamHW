@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HWPragueParkingV1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a7006dddddbdbdd6227dfca6ef170684d4ace58f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d192ecb81f392944fe985a3243f9ada0307ad7a0")]
 [assembly: System.Reflection.AssemblyProductAttribute("HWPragueParkingV1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HWPragueParkingV1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

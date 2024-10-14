@@ -381,10 +381,14 @@ namespace HWPragueParkingV1
                         case 0:
 
                             CenterText("Car");
+                            Console.Clear();
+                            HelloWorld();
                             ManipulateParking.CarSearch();
                             return;
                         case 1:
                             CenterText("MC");
+                            Console.Clear();
+                            HelloWorld();
                             ManipulateParking.McSearch();
                             return;
                         case 2:
@@ -449,12 +453,14 @@ namespace HWPragueParkingV1
                         case 0:
 
                             CenterText("Car");
-                            
+                            Console.Clear();
+                            HelloWorld();
                             ManipulateParking.MoveCar();
                             return;
                         case 1:
                             CenterText("MC");
-                            
+                            Console.Clear();
+                            HelloWorld();
                             return;
                         case 2:
                             CenterText("Retrun");
