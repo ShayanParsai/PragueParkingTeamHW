@@ -365,11 +365,11 @@ namespace HWPragueParkingV1
                         case 0:
 
                             CenterText("Car");
-                            //ManipulateParking.AddCar();
+                            ManipulateParking.CarSearch();
                             return;
                         case 1:
                             CenterText("MC");
-                            //ManipulateParking.AddMC();
+                            ManipulateParking.McSearch();
                             return;
                         case 2:
                             CenterText("Retrun");
