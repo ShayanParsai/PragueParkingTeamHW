@@ -31,6 +31,7 @@ Oliver
 - En fungerade "karta" över parkeringen.
 - BugFix Bugfix: 3 Mc kunde parkera på samma plats, Mc kunde parkera på plats 0 och sen inte hittas.
 - Created ViewParking Method 
+- bugfix view parking  
 -
 Martin
 - https://miro.com/ planering, förbreda inför uppgiften, räkna ut hur vi ska lösa uppgiften
