@@ -144,6 +144,19 @@ namespace HWPragueParkingV1
         }
         public static void ViewParking()
         {
+            Console.Write("Cars will appear in: ");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("Blue");
+            Console.ResetColor();
+            Console.Write("Motorcykles will apear in: ");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Red");
+            Console.ResetColor();
+            Console.Write("Empty spaces will appear as: ");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(@"""0""");
+
+
             string[] unwantedSymbols = { "*", "#" };                         // Create and array of the unwanted char but in string format
 
             for (int i = 1; i < InfoArray.ArrayParking.Length; i++)
