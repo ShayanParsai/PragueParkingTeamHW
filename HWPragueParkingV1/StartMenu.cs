@@ -14,7 +14,6 @@ namespace HWPragueParkingV1
 
             //ManipulateParking ManipulateParking = new ManipulateParking();
             // För att öppna upp array till vår main
-
             InfoArray.CreateParking();
 
             ConsoleKeyInfo keyInfo;
@@ -42,7 +41,7 @@ namespace HWPragueParkingV1
                     if (i == choice)
                     {
                         Console.BackgroundColor = ConsoleColor.Black;
-                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
                         Console.WriteLine(centeredText);
                         Console.ResetColor();
                     }
@@ -150,7 +149,7 @@ namespace HWPragueParkingV1
 
         static void HelloWorld()
         {
-            CenterTextLine("Welcome to Hello, World Prauge Parking");
+            CenterTextLine("Welcome to Hello, World Prague Parking");
             CenterTextLine("Choose what you would like to do");
             Console.WriteLine();
             Console.WriteLine();
@@ -171,7 +170,7 @@ namespace HWPragueParkingV1
 
         static void ShuttingDown()            // Gör en cool effect för shutdown system
         {
-            string message = "Shutting down";
+            string message = "Shutting down System";
             CenterText(message);
 
             for (int i = 0; i < 6; i++)
@@ -205,7 +204,7 @@ namespace HWPragueParkingV1
                     if (i == choice)
                     {
                         Console.BackgroundColor = ConsoleColor.Black;
-                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
                         Console.WriteLine(centeredText);
                         Console.ResetColor();
                     }
@@ -271,7 +270,7 @@ namespace HWPragueParkingV1
                     if (i == choice)
                     {
                         Console.BackgroundColor = ConsoleColor.Black;
-                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
                         Console.WriteLine(centeredText);
                         Console.ResetColor();
                     }
@@ -337,7 +336,7 @@ namespace HWPragueParkingV1
                     if (i == choice)
                     {
                         Console.BackgroundColor = ConsoleColor.Black;
-                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
                         Console.WriteLine(centeredText);
                         Console.ResetColor();
                     }
@@ -403,7 +402,7 @@ namespace HWPragueParkingV1
                     if (i == choice)
                     {
                         Console.BackgroundColor = ConsoleColor.Black;
-                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
                         Console.WriteLine(centeredText);
                         Console.ResetColor();
                     }
