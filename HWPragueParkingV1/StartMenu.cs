@@ -25,7 +25,7 @@ namespace HWPragueParkingV1
             HelloWorld();
 
             string[] menuChoice = { "Park a Vehicle", "Remove a Vehicle", "Search for a vehicle", "View Parking",
-                "Move a Vehicle", "Credits", "Exit" };  // Skapar en array för att i min tidigare version där jag använda massa cw flickrade skärmen detta gör det mer smooth
+                "Move a Vehicle", "Credits", "Optimize Parking", "Exit" };  // Skapar en array för att i min tidigare version där jag använda massa cw flickrade skärmen detta gör det mer smooth
             int maxLength = menuChoice.Max(item => item.Length) + 4;
             while (true)
             {
@@ -61,7 +61,7 @@ namespace HWPragueParkingV1
                 }
                 else if (keyInfo.Key == ConsoleKey.DownArrow)
                 {
-                    if (choice < 7)
+                    if (choice < 8)
                         choice++;
                 }
                 else if (keyInfo.Key == ConsoleKey.Enter)
@@ -117,6 +117,15 @@ namespace HWPragueParkingV1
                             HelloWorld();
                             break;
                         case 6:
+                            Console.Clear();
+                            CenterTextLine("Optimize parking");
+                            Console.ReadKey();
+                            Console.Clear();
+                            HelloWorld();
+                            // Fill here for the optmizing
+                            // If you want the text to be centerd and alinged dont use CW but use the CentertextLine or CenterText.
+                            break;
+                        case 7:
                             Console.Clear();
                             CenterTextLine("Exit");
                             ShuttingDown();
