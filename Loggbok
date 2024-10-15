@@ -19,9 +19,13 @@ Basel
 - Centrerat så att texten börjar i mitten av skrämen. 
 - Har skapat flera metoder för att dom ska funka tillsammans med menun och våra andra classer.
 - Bugfixat runt om men för det mesta i menun. 
-- 
+- la till move car och sin plats i menyn 
+- la till optimize parkering i menyn 
+- finlir med menyn 
+-  la till search och gjorde klart
 -
 -
+
 Oliver
 - https://miro.com/ planering, förbreda inför uppgiften, räkna ut hur vi ska lösa uppgiften
 - Vi satt i Chalmers grupprum, brainstorming, skapa classer, metoder och byggt på grunden i koded, mappat ut hur eventuella metoder ska se ut.
@@ -29,10 +33,19 @@ Oliver
 - Vi har skapat en static array som används genom alla klasser som uppdateras med varje add mc/car.
 - Vi skapade add Car och add MC. Problem uppstod när vi skulle kalla på vår static array. Fixade med en simple bugfix. 
 - En fungerade "karta" över parkeringen.
-- BugFix Bugfix: 3 Mc kunde parkera på samma plats, Mc kunde parkera på plats 0 och sen inte hittas.
+- Bugfix: 3 Mc kunde parkera på samma plats, Mc kunde parkera på plats 0 och sen inte hittas.
+- Bugfix: Add Mc & Car särade inte på mc eller bil 
 - Created ViewParking Method 
 - bugfix view parking  
+- la till move car och sin plats i menyn 
+- la till optimize parkering i menyn 
+- finlir med menyn
+- gjorde klart view parking 
+- la till search och gjorde klart
 -
+-
+
+
 Martin
 - https://miro.com/ planering, förbreda inför uppgiften, räkna ut hur vi ska lösa uppgiften
 - Vi satt i Chalmers grupprum, brainstorming, skapa classer, metoder och byggt på grunden i koded, mappat ut hur eventuella metoder ska se ut.
