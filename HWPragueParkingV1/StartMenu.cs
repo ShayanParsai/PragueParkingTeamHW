@@ -20,7 +20,7 @@ namespace HWPragueParkingV1
             int choice = 0;                                         // To Create and keep track of our menu choice
             StartingSystem();                      // Vi använder en ny CW vilket är vår egna metod för att centrera 
             
-
+            
             Console.Clear();
             HelloWorld();
 
@@ -114,7 +114,8 @@ namespace HWPragueParkingV1
                             Console.Clear();
                             CenterTextLine("Credits");                   // Kommer fixa denna senare tid, har lite roliga ideer till detta.
                             Console.Clear();
-                            HelloWorld();
+                            EndCretids();
+                            Console.Clear();
                             break;
                         case 7:
                             Console.Clear();
@@ -457,6 +458,53 @@ namespace HWPragueParkingV1
                     }
                 }
             }
+        }
+
+        public static void EndCretids()
+        {
+           string[] endCredtis = new string[]
+           {
+                "----------------------------",
+                "        CREDIT ROLL         ",
+                "----------------------------",
+                "",
+                "Director: Cleas Engelin",
+                "Producer: Cleas Engelin",
+                "Lead Developer: Cleas Engelin",
+                "Graphic Designer: Cleas Engelin",
+                "Sound Engineer: Cleas Engelin",
+                "Special Thanks To: Cleas Engelin",
+                "",
+                "----------------------------",
+                "        THE END.            ",      
+                "       Cleas Engelin        ",
+                "----------------------------"
+            };
+            Console.CursorVisible = false;
+
+            int windowHeight = Console.WindowHeight;
+
+            for (int i = 0; i < windowHeight; i++)
+            {
+                Console.WriteLine();
+            }
+
+            foreach (string line in endCredtis)
+            {
+                Console.SetCursorPosition(0, 0);
+                CenterTextLine(line);
+
+                Thread.Sleep(500);
+
+                for (int i = 0;i < windowHeight - 1; i++)
+                {
+                    Console.WriteLine();
+                }
+            }
+
+            Console.SetCursorPosition (0, windowHeight - 1);
+            CenterTextLine("Press any key to return to main menu");
+            Console.ReadKey(true);
         }
     }
 }
