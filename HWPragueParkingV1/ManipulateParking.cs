@@ -162,7 +162,118 @@ namespace HWPragueParkingV1
         ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         public static void MoveMC()
         {
+            string inputMCReg = "";
+            bool backToMainMenu = false;
+            string substring = "*";
+            string substring2 = "#";
+            string substring3 = "0";
 
+            Console.WriteLine("Please enter the Vehicle registration number");
+            inputMCReg = Console.ReadLine().ToUpper();
+
+            while (!backToMainMenu)
+            {
+
+                if (inputMCReg == "RETURN")
+                {
+                    backToMainMenu = true;
+                    break;
+                }
+
+                else
+                {
+
+                    bool MCFound = false;
+                    int row = 1;
+
+                    for (row = 1; row < InfoArray.ArrayParking.Length; row++)
+                    {
+                        string ArrayParkingPlace = InfoArray.ArrayParking[row];
+
+                        if (ArrayParkingPlace.Contains(inputMCReg) && ArrayParkingPlace.Contains(substring))
+                        {
+                            MCFound = true;
+
+                            if (ArrayParkingPlace.Contains(substring2))
+                            {
+                                Console.WriteLine($"Your vehicle is parked in spot number: {row}");
+                                InfoArray.ArrayParking[row] = "0";
+                            }
+
+                            else
+                            {
+                                Console.WriteLine($"Your vehicle is parked in spot number: {row}");
+                                string currentParkedMC = InfoArray.ArrayParking[row];
+                                InfoArray.ArrayParking[row] = currentParkedMC.Replace(inputMCReg, "#");
+                            }
+                            break;
+                        }
+                    }
+
+                    if (!MCFound)
+                    {
+                        Console.WriteLine(@"Your registration is INVALID, Try again. Type ""Return"" to go back to main menu");
+                        inputMCReg = Console.ReadLine().ToUpper();
+                        if (inputMCReg == "RETURN")
+                        {
+                            backToMainMenu = true;
+                            break;
+                        }
+                        else
+                        {
+                            continue;
+                        }
+
+                    }
+
+                    Console.WriteLine(@"Enter the parking space you would like to move to or type ""0"" to return to main menu: ");
+                    int newSpace = int.Parse(Console.ReadLine());
+                    if (newSpace == 0)
+                    {
+                        backToMainMenu = true;
+                        break;
+                    }
+
+                    while (!backToMainMenu)
+                    {
+
+                        string ArrayParkingNewSpace = InfoArray.ArrayParking[newSpace];
+
+                        if (ArrayParkingNewSpace.Contains(substring2))
+                        {
+                            string newParkingSpace = InfoArray.ArrayParking[newSpace];
+                            InfoArray.ArrayParking[newSpace] = newParkingSpace.Replace(substring2, inputMCReg);
+                            Console.WriteLine($"We have moved your vehicle from {row} to parking spot {newSpace} and its parked with another MC");
+                            Console.ReadKey(true);
+                            backToMainMenu = true;
+                            break;
+                        }
+
+                        else if (InfoArray.ArrayParking[newSpace].Contains("0"))
+                        {
+                            string newParkingSpace = InfoArray.ArrayParking[newSpace];
+                            InfoArray.ArrayParking[newSpace] = newParkingSpace.Replace(substring3, inputMCReg);
+                            InfoArray.ArrayParking[newSpace] = inputMCReg + " * #";
+                            Console.WriteLine($"We have moved your vehicle from {row} to parking spot {newSpace}");
+                            Console.ReadKey(true);
+                            backToMainMenu = true;
+                            break;
+                        }
+
+                        else if (!InfoArray.ArrayParking[newSpace].Contains("#") && !InfoArray.ArrayParking[newSpace].Contains("0"))
+                        {
+                            Console.WriteLine(@"This space is already occupied, please choose another space. Type ""0"" to go back to main menu");
+                            newSpace = int.Parse(Console.ReadLine());
+                            if (newSpace == 0)
+                            {
+                                backToMainMenu = true;
+                                break;
+                            }
+                        }
+                    }
+
+                }
+            }
         }
         ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         public static void RemoveCar()

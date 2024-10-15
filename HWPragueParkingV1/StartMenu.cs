@@ -25,7 +25,7 @@ namespace HWPragueParkingV1
             HelloWorld();
 
             string[] menuChoice = { "Park a Vehicle", "Remove a Vehicle", "Search for a vehicle", "View Parking",
-                "Move a Vehicle", "Credits", "Optimize Parking", "Exit" };  // Skapar en array för att i min tidigare version där jag använda massa cw flickrade skärmen detta gör det mer smooth
+                "Move a Vehicle", "Optimize Parking", "Credits", "Exit" };  // Skapar en array för att i min tidigare version där jag använda massa cw flickrade skärmen detta gör det mer smooth
             int maxLength = menuChoice.Max(item => item.Length) + 4;
             while (true)
             {
@@ -69,7 +69,6 @@ namespace HWPragueParkingV1
                     switch (choice)
                     {
                         case 0:
-
                             Console.Clear();
                             CenterTextLine("park");                //här ska metoden in
                             Console.Clear();
@@ -116,6 +115,8 @@ namespace HWPragueParkingV1
                             Console.Clear();
                             HelloWorld();
                             break;
+                        // Fill here for the optmizing
+                        // If you want the text to be centerd and alinged dont use CW but use the CentertextLine or CenterText.
                         case 6:
                             Console.Clear();
                             CenterTextLine("Credits");                   // Kommer fixa denna senare tid, har lite roliga ideer till detta.
@@ -124,15 +125,6 @@ namespace HWPragueParkingV1
                             HelloWorld();
                             break;
                         case 7:
-                            Console.Clear();
-                            CenterTextLine("Optimize parking");
-                            Console.ReadKey();
-                            Console.Clear();
-                            HelloWorld();
-                            // Fill here for the optmizing
-                            // If you want the text to be centerd and alinged dont use CW but use the CentertextLine or CenterText.
-                            break;
-                        case 8:
                             Console.Clear();
                             CenterTextLine("Exit");
                             ShuttingDown();
@@ -461,6 +453,7 @@ namespace HWPragueParkingV1
                             CenterText("MC");
                             Console.Clear();
                             HelloWorld();
+                            ManipulateParking.MoveMC();
                             return;
                         case 2:
                             CenterText("Retrun");
