@@ -72,46 +72,39 @@ namespace HWPragueParkingV1
                             Console.Clear();
                             CenterTextLine("park");                //här ska metoden in
                             Console.Clear();
-                            HelloWorld();
+                            CenterText("Park");
                             CarorMCPark();
                             break;
                         case 1:
                             Console.Clear();
                             CenterTextLine("Remove a Vehicle");                      // Metod
-                            Console.ReadKey();
                             Console.Clear();
-                            HelloWorld();
                             CarorMCRemove();
                             break;
                         case 2:
                             Console.Clear();
                             CenterTextLine("Search for a vehicle");                   // Metod 
-                            Console.ReadKey();
                             Console.Clear();
                             HelloWorld();
                             CarorMCSearch();
                             break;
                         case 3:
                             Console.Clear();
-                            HelloWorld();
                             CenterTextLine("View Parking");                   // Metod 
-                            Console.ReadKey();
                             Console.Clear();
-                            HelloWorld();
+                            CenterTextLine("Hello, World Prague Parking");
+                            CenterTextLine("View Parking");
                             ManipulateParking.ViewParking();
                             break;
                         case 4:
                             Console.Clear();
                             CenterTextLine("Move a Vehicle");                   // Metod 
-                            Console.ReadKey();
                             Console.Clear();
-                            HelloWorld();
                             CarorMCMove();
                             break;
                         case 5:
                             Console.Clear();
                             CenterTextLine("Optimize Parking");                   // Metod 
-                            Console.ReadKey();
                             Console.Clear();
                             HelloWorld();
                             break;
@@ -120,7 +113,6 @@ namespace HWPragueParkingV1
                         case 6:
                             Console.Clear();
                             CenterTextLine("Credits");                   // Kommer fixa denna senare tid, har lite roliga ideer till detta.
-                            Console.ReadKey();
                             Console.Clear();
                             HelloWorld();
                             break;
@@ -192,7 +184,8 @@ namespace HWPragueParkingV1
         public static void CarorMCPark()
         {
             Console.Clear();
-            HelloWorld();
+            CenterTextLine("Hello, World Prague Parking");
+            CenterText("Park a Vehicle");
             ConsoleKeyInfo keyInfo;
             int choice = 0;
             string[] carorMC = { "Car", "MC", "Return" };
@@ -258,7 +251,8 @@ namespace HWPragueParkingV1
         public static void CarorMCRemove()
         {
             Console.Clear();
-            HelloWorld();
+            CenterTextLine("Hello, World Prague Parking");
+            CenterText("Remove a Vehicle");
             ConsoleKeyInfo keyInfo;
             int choice = 0;
             string[] carorMC = { "Car", "MC", "Return" };
@@ -324,7 +318,8 @@ namespace HWPragueParkingV1
         public static void CarorMCSearch()
         {
             Console.Clear();
-            HelloWorld();
+            CenterTextLine("Hello, World Prague Parking");
+            CenterText("Search for a vehicle");
             ConsoleKeyInfo keyInfo;
             int choice = 0;
             string[] carorMC = { "Car", "MC", "Return" };
@@ -394,7 +389,8 @@ namespace HWPragueParkingV1
         public static void CarorMCMove()
         {
             Console.Clear();
-            HelloWorld();
+            CenterTextLine("Hello, World Prague Parking");
+            CenterText("Move a vehicle");
             ConsoleKeyInfo keyInfo;
             int choice = 0;
             string[] carorMC = { "Car", "MC", "Return" };
