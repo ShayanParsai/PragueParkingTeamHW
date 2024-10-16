@@ -7,6 +7,7 @@ Shayan
 - Problem uppstod när vi skulle kalla på vår static array. Fixade med en simple bugfix.
 - Skrivit kod för OptimizeParking, som flyttar ensamma MC till andra ensamma MC.
 - Rensat Main, flyttat ut meny metoder till en separat klass (VisualMenu)
+- Skapat OptimizeMC - som flyttar ihopp 2 ensamma MC med varandra för att skapa en till tom parkeringsplats.
 -
 Basel
 - https://miro.com/ planering, förbreda inför uppgiften, räkna ut hur vi ska lösa uppgiften
