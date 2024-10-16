@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HWPragueParkingV1
-build_property.ProjectDir = C:\Users\Chalamdor\source\repos\PragueParkingTeamHW-364e5ed600d1601cf68439aa226b5c1843bb4f59\HWPragueParkingV1\
+build_property.ProjectDir = C:\Users\ollic\Source\Repos\PragueParkingTeamHW\HWPragueParkingV1\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

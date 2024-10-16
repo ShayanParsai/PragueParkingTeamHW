@@ -277,8 +277,9 @@ namespace HWPragueParkingV1
         ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         public static void RemoveCar()
         {
-            // Input Reg nummer
-            Console.Write("Enter your registration number: ");
+            bool carRemove = true;
+
+            Console.Write("Enter your registration number: ");                                  //Input for Reg converted to upper
             string Reg = Console.ReadLine().ToUpper();
             while (Reg.Length > 10 || Reg.Length < 4)
             {
@@ -286,22 +287,117 @@ namespace HWPragueParkingV1
                 Console.Write("Enter your registration number: ");
                 Reg = Console.ReadLine().ToUpper();
             }
-            for (int row = 0; row < 101; row++)
+
+            while (carRemove)
             {
-                if (InfoArray.ArrayParking[row].Contains(Reg))
+                int index = Array.IndexOf(InfoArray.ArrayParking, Reg);                         //Variable of the whole array, looking for Reg
+                if (index != -1)                                                                //If-loop activated when we are not getting -1
                 {
-                    int index = Array.IndexOf(InfoArray.ArrayParking, Reg);
-                    InfoArray.ArrayParking[row] = InfoArray.ArrayParking[row].Replace(Reg, "0");
+                    InfoArray.ArrayParking[index] = "0";                                        //Replaced with empyty lot 
                     Console.WriteLine($"Your car was removed from spot {index}");
+                    Console.ReadKey(true);
+                    carRemove = false;
+                    break;
+                }
+                else if (index == -1)                                                       //Incase we get -1 (no reg found)
+                {
+                    Console.WriteLine("The registration number was not found.");
+                    Console.WriteLine("Please enter your registration number or type Return to return to main menu: ");
+                    Reg = Console.ReadLine().ToUpper();
+                    if (Reg == "RETURN")
+                    {
+                        carRemove = false;                                                  //Type return to get back
+                        break;
+                    }
                 }
             }
-
-                                                                                                  // Remove vehicle from spot X
+            
         }
         ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         public static void RemoveMC()
         {
+            string substring = "#";                                                                         //Variable for search-object
+            bool mcFound = false;
 
+
+            Console.Write("Enter your registration number: ");
+            string Reg = Console.ReadLine().ToUpper();
+            while (Reg.Length > 10 || Reg.Length < 4)
+            {
+                Console.Write("Reg is invalid please retry again");
+                Console.Write("Enter your registration number: ");
+                Reg = Console.ReadLine().ToUpper();
+            }
+
+
+
+
+            while (!mcFound)
+            {
+
+                for (int row = 1; row < InfoArray.ArrayParking.Length; row++)                                               //Searching array
+                {
+                    string currentIndex = InfoArray.ArrayParking[row];
+                    if (currentIndex.Contains(Reg))                                                                         //Searching for inputed Reg
+                    {
+                        if (currentIndex.Contains("*"))                                                                     //Searching for MC-lots
+                        {
+                            if (currentIndex.Contains("#"))                                                                 //Finding mc-lot with only one MC
+                            {
+                                Console.Write($"Your motorcycle was removed from parking spot: {row}");                     //Replace with 0, breaks
+                                InfoArray.ArrayParking[row] = "0";
+                                Console.ReadKey(true);
+                                mcFound = true;
+                                break;
+                            }
+                            else
+                            {
+                                Console.Write($"Your MC was removed from parking spot: {row}");                             //Lots with only *, replace one reg with #
+                                InfoArray.ArrayParking[row] = currentIndex.Replace(Reg, substring);
+                                Console.ReadKey(true);
+
+                                mcFound = true;
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            Console.Write($"The registration number {Reg} does not exist, please input another registration number: ");         //Invalid Reg
+                            Console.WriteLine(@"Or type ""Return"" to go back to menu: ");
+                            Reg = Console.ReadLine().ToUpper();
+
+                            if (Reg == "RETURN")
+                            {
+
+                                mcFound = true;
+                                break;
+                            }
+                            else
+                            {                                                                                                                   //Resetting to start of array
+                                row = 1;
+                            }
+
+                        }
+                    }
+                    else if (row == InfoArray.ArrayParking.Length - 1)
+                    {
+                        Console.WriteLine($"The registration number {Reg} does not exist, please input another registration number: ");         //Failsafe to cover different cases of invalid Reg
+                        Console.Write(@"Or type ""Return"" to go back to menu: ");
+                        Reg = Console.ReadLine().ToUpper();
+                        if (Reg == "RETURN")
+                        {
+
+                            mcFound = true;
+                            break;
+                        }
+                        else
+                        {
+                            row = 1;
+                        }
+                    }
+                }
+
+            }
         }
         ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         public static void CarSearch()
