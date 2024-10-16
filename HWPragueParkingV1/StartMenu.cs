@@ -99,9 +99,9 @@ namespace HWPragueParkingV1
                             VisualMenu.CenterTextLine("Optimize Parking");                
                             Console.Clear();
                             VisualMenu.HelloWorld();
+                            ManipulateParking.OptimizeParkingMC();
                             break;
-                        // Fill here for the optmizing
-                        // If you want the text to be centerd and alinged dont use CW but use the CentertextLine or CenterText.
+                            
                         case 6:
                             Console.Clear();
                             VisualMenu.CenterTextLine("Credits");
