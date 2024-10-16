@@ -86,22 +86,46 @@ namespace HWPragueParkingV1
             Console.ReadKey(true);
             Console.Clear();
         }
-
-        ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-        public static void OptimizeParkingCar()
-        {
-            // Car or MC
-            // input reg nummer
-            // string check for closeset avalibe space - "0"
-            // Park at "X" Spot
-            // Save reg at "X"
-            //
-        }
         ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         public static void OptimizeParkingMC()
         {
-            // string originalText = "Hello World!";
-            // string newText = originalText.Replace("World", "C# Developer"); // replace the desierd string
+            int firstSoloMCSpot = -1; // WE use this to save the spot of the first solo MC
+            int secondSoloMCSpot = -1; // WE use this to save the spot of the second solo MC
+
+            for (int i = 1; i < InfoArray.ArrayParking.Length; i++) // Loop through all the parking spots to find solo MCs (Reg * #)
+            {
+                string parkingSpot = InfoArray.ArrayParking[i];
+
+                if (parkingSpot.Contains("*") && parkingSpot.Contains("#")) // Check if the parking spot contains one motorcycle (Reg * #)
+                {
+                    if (firstSoloMCSpot == -1)
+                    {
+                        firstSoloMCSpot = i;
+                    }
+                    else
+                    {
+                        secondSoloMCSpot = i;
+                        break;
+                    }
+                }
+            }
+
+            if (firstSoloMCSpot != -1 && secondSoloMCSpot != -1) // If both the first solo MC and second MC was found, we make the switch
+            {
+                string secondMCReg = InfoArray.ArrayParking[secondSoloMCSpot].Replace("*", "").Replace("#", "").Trim(); // to make sure we ONLY save the reg
+
+                Console.WriteLine($"Moving motorcycle with registration {secondMCReg} from parking {secondSoloMCSpot} to parking {firstSoloMCSpot}.");
+                InfoArray.ArrayParking[firstSoloMCSpot] = InfoArray.ArrayParking[firstSoloMCSpot].Replace("#", secondMCReg); // move the second MC to the solo MC spot
+
+                InfoArray.ArrayParking[secondSoloMCSpot] = "0"; // We make sure the spot we moved it from is now empty
+                Console.WriteLine($"parkingspot {secondSoloMCSpot} is now empty.");
+            }
+            else
+            {
+                Console.WriteLine("No optimization needed. Either no solo motorcycles found or not enoug to optimize.");
+            }
+            Console.WriteLine("Press any key to return to menu.");
+            Console.ReadKey(true);
         }
         ///--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         public static void MoveCar()
