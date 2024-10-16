@@ -11,7 +11,6 @@ namespace HWPragueParkingV1
 {
     internal class ManipulateParking
     {
-
         public static void AddCar()
         {
             Console.Clear();
@@ -419,8 +418,5 @@ namespace HWPragueParkingV1
             Console.WriteLine("Press any key to return to menu:");
             Console.ReadKey(true);
         }
-        
-
-        
     }
 }

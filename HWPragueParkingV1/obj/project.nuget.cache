@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "jAla1aCIsII=",
   "success": true,
   "projectFilePath": "C:\\Users\\bas_e\\Source\\Repos\\PragueParkingTeamHW\\HWPragueParkingV1\\HWPragueParkingV1.csproj",
+=======
+  "dgSpecHash": "sWtRZ9QoDcY=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Chalamdor\\Source\\Repos\\PragueParkingTeamHW\\HWPragueParkingV1\\HWPragueParkingV1.csproj",
+>>>>>>> 813615c97321d7a5785e4aad587e522c20309d8c
   "expectedPackageFiles": [],
   "logs": []
 }
