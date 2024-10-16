@@ -6,7 +6,7 @@ Shayan
 - Vi har skapat en static array som används genom alla klasser som uppdateras med varje add mc/car.
 - Problem uppstod när vi skulle kalla på vår static array. Fixade med en simple bugfix.
 - Skrivit kod för OptimizeParking, som flyttar ensamma MC till andra ensamma MC.
--
+- Rensat Main, flyttat ut meny metoder till en separat klass (VisualMenu)
 -
 Basel
 - https://miro.com/ planering, förbreda inför uppgiften, räkna ut hur vi ska lösa uppgiften
