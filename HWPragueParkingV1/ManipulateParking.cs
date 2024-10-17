@@ -16,7 +16,7 @@ namespace HWPragueParkingV1
             Console.Clear();
             Console.Write("Enter your registration number: ");                                           // while loop for correct input of reg number 
             string Reg = Console.ReadLine().ToUpper();
-            while (Reg.Length > 10 || Reg.Length < 4)
+            while (Reg.Length > 10 || Reg.Length < 4 || Reg.Contains(" "))
             {
                 Console.WriteLine("Reg is invalid please retry again");
                 Console.Write("Enter your registration number: ");
@@ -47,7 +47,7 @@ namespace HWPragueParkingV1
 
             Console.Write("Enter your registration number: ");
             string Reg = Console.ReadLine().ToUpper();
-            while (Reg.Length > 10 || Reg.Length < 4)                                                                   // while loop for correct input of reg number 
+            while (Reg.Length > 10 || Reg.Length < 4 || Reg.Contains(" "))                                                                   // while loop for correct input of reg number 
             {
                 Console.WriteLine("Reg is invalid please retry again");
                 Console.Write("Enter your registration number: ");
@@ -62,7 +62,6 @@ namespace HWPragueParkingV1
 
                     InfoArray.ArrayParking[row] = InfoArray.ArrayParking[row].Replace("#", Reg);                        // replace the desierd string in empty 1/2 MC space (2 Mc parked in same space)
                     Console.WriteLine($"Your MC is parked in space {row} with another motorcycle");
-                    Console.ReadKey(true);
                     break;
                 }
                 else if (InfoArray.ArrayParking[row] == "0")
