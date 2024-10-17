@@ -303,6 +303,7 @@ namespace HWPragueParkingV1
         {
             bool carRemove = true;
 
+            Console.Clear();
             Console.Write("Enter your registration number: ");                                  //Input for Reg converted to upper
             string Reg = Console.ReadLine().ToUpper();
             while (Reg.Length > 10 || Reg.Length < 4)
@@ -343,7 +344,7 @@ namespace HWPragueParkingV1
             string substring = "#";                                                                         //Variable for search-object
             bool mcFound = false;
 
-
+            Console.Clear();
             Console.Write("Enter your registration number: ");
             string Reg = Console.ReadLine().ToUpper();
             while (Reg.Length > 10 || Reg.Length < 4)
