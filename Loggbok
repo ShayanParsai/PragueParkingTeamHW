@@ -53,5 +53,8 @@ Martin
 - Planerat med kommentarer vad som ska ske i varje metod.
 - 11/10 - Arbetade efter lektion. Skapade en metod för Remove Car, samt lade upp en plan för Remove MC.
 - 11/10 Kväll. Bugg: Remove MC visar att MC's tas från plats "-1". 
--
+- Ändrade RemoveCar för att säkerställa ogiltiga inputs
+- Lade till metod för RemoveMC
+- Bråk med Git Commits.
+- Buggfix: Gick att hitta en bil/mc genom att bara skriva en bokstav i reg-numret
 -
